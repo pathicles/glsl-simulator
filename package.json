@@ -26,7 +26,7 @@
     "assmeblyscript"
   ],
   "author": "S.F.",
-  "license": "MIT",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/sfpgmr/glsl-simulator/issues"
   },
