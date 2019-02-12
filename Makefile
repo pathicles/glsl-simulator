@@ -60,7 +60,7 @@ all: parser browser
 
 # Generate the grammar parser
 parser:
-	$(PEGJS) $(PARSER_SRC_FILE) $(PARSER_OUT_FILE)
+	$(PEGJS) -o $(PARSER_OUT_FILE) $(PARSER_SRC_FILE)
 
 # Build the browser version of the library
 browser:
