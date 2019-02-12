@@ -10,9 +10,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --validate --debug",
-    "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --validate --optimize",
-    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
     "parser": "pegjs -o ./lib/compiler/parser.js ./src/glsl.pegjs"
   },
   "repository": {
@@ -32,8 +29,10 @@
   },
   "homepage": "https://github.com/sfpgmr/glsl-simulator#readme",
   "devDependencies": {
-    "assemblyscript": "github:AssemblyScript/assemblyscript",
     "pegjs": "^0.10.0",
     "uglify-js": "^3.4.9"
+  },
+  "dependencies": {
+    "binaryen": "^67.0.0"
   }
 }
