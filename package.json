@@ -1,0 +1,38 @@
+{
+  "name": "glsl-simulator",
+  "version": "0.5.0",
+  "description": "glsl compile to wasm",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --validate --debug",
+    "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --validate --optimize",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfpgmr/glsl-simulator.git"
+  },
+  "keywords": [
+    "glsl",
+    "compiler",
+    "wasm",
+    "assmeblyscript"
+  ],
+  "author": "S.F.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sfpgmr/glsl-simulator/issues"
+  },
+  "homepage": "https://github.com/sfpgmr/glsl-simulator#readme",
+  "devDependencies": {
+    "assemblyscript": "github:AssemblyScript/assemblyscript",
+    "pegjs": "^0.10.0",
+    "uglify-js": "^3.4.9"
+  }
+}
